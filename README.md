@@ -38,12 +38,11 @@
 
 | # | Section | Description |
 |---|---------|-------------|
-<img width="1888" height="976" alt="08 05 2026_04 12 40_REC" src="https://github.com/user-attachments/assets/74934a7c-959b-491a-a607-fc2de382daf7" />
-<img width="1847" height="970" alt="08 05 2026_04 14 05_REC" src="https://github.com/user-attachments/assets/7c3adfbc-74f1-438c-b108-de04cec374d1" />
-<img width="1841" height="980" alt="08 05 2026_04 13 50_REC" src="https://github.com/user-attachments/assets/1a41059d-b5f4-4c7f-b3b5-383056155549" />
-
-<img width="1892" height="986" alt="08 05 2026_04 12 15_REC" src="https://github.com/user-attachments/assets/4a011e45-2f46-4e84-82b3-bfdfc8537886" />
-
+| 01 | Hero | Intro, photo, animated stats, CV download |
+| 02 | Skills | Bento grid across ML, Web, Biomedical, Languages |
+| 03 | Projects | 5 featured projects with screenshot/video carousels |
+| 04 | Research | Vertical timeline for research & IEEE experience |
+| 05 | Contact | Email, GitHub, LinkedIn |
 
 ---
 
@@ -66,4 +65,7 @@ npm run dev
 
 ---
 
-<p align="center">Cairo University · Systems & Biomedical Engineering · Class of 2027</p>
+<p align="center">Cairo University · Systems & Biomedical Engineering · Class of 2027</p><img width="1847" height="970" alt="08 05 2026_04 14 05_REC" src="https://github.com/user-attachments/assets/59d38386-71cb-422e-a531-7792418c846f" />
+<img width="1841" height="980" alt="08 05 2026_04 13 50_REC" src="https://github.com/user-attachments/assets/e570988e-5a7b-4076-b130-39fa69a6e80f" />
+<img width="1888" height="976" alt="08 05 2026_04 12 40_REC" src="https://github.com/user-attachments/assets/728e471e-85ba-42fc-824b-72187193d5a0" />
+<img width="1892" height="986" alt="08 05 2026_04 12 15_REC" src="https://github.com/user-attachments/assets/9bc375c3-6ed1-407d-bd2a-eb4d8d82efc7" />
