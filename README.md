@@ -11,11 +11,16 @@
 
 | Hero | Projects |
 |------|----------|
-| ![Hero](src/assets/screenshot-hero.png) | ![Projects](src/assets/screenshot-projects.png) |
+| <img width="1892" height="986" alt="08 05 2026_04 12 15_REC" src="https://github.com/user-attachments/assets/8844abfc-7588-492f-8282-f7a0230cd4f6" />
+ |   <img width="1841" height="980" alt="08 05 2026_04 13 50_REC" src="https://github.com/user-attachments/assets/655203c6-1dc4-4cf2-b15c-0bda456155be" />
+ |
 
 | Skills | Timeline |
 |--------|----------|
-| ![Skills](src/assets/screenshot-skills.png) | ![Timeline](src/assets/screenshot-timeline.png) |
+| <img width="1888" height="976" alt="08 05 2026_04 12 40_REC" src="https://github.com/user-attachments/assets/7fe8818d-c80f-4a4a-9e68-74498ab5093e" />
+
+<img width="1847" height="970" alt="08 05 2026_04 14 05_REC" src="https://github.com/user-attachments/assets/6093a757-d47e-4aa4-af80-b342b406a973" />
+ |
 
 ---
 
@@ -65,7 +70,4 @@ npm run dev
 
 ---
 
-<p align="center">Cairo University · Systems & Biomedical Engineering · Class of 2027</p><img width="1847" height="970" alt="08 05 2026_04 14 05_REC" src="https://github.com/user-attachments/assets/59d38386-71cb-422e-a531-7792418c846f" />
-<img width="1841" height="980" alt="08 05 2026_04 13 50_REC" src="https://github.com/user-attachments/assets/e570988e-5a7b-4076-b130-39fa69a6e80f" />
-<img width="1888" height="976" alt="08 05 2026_04 12 40_REC" src="https://github.com/user-attachments/assets/728e471e-85ba-42fc-824b-72187193d5a0" />
-<img width="1892" height="986" alt="08 05 2026_04 12 15_REC" src="https://github.com/user-attachments/assets/9bc375c3-6ed1-407d-bd2a-eb4d8d82efc7" />
+
