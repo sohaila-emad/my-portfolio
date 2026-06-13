@@ -55,6 +55,45 @@ const FTMIXER_MEDIA = [
   { type: "video", src: ftVid },
 ];
 
+// 3elty screenshots
+import elty_f   from "./assets/f.jpg";
+import elty_f1  from "./assets/f1.jpg";
+import elty_f2  from "./assets/f2.jpg";
+import elty_f3  from "./assets/f3.jpg";
+import elty_f4  from "./assets/f4.jpg";
+import elty_f5  from "./assets/f5.jpg";
+import elty_f6  from "./assets/f6.jpg";
+import elty_f7  from "./assets/f7.jpg";
+import elty_f8  from "./assets/f8.jpg";
+import elty_f9  from "./assets/f9.jpg";
+import elty_ff  from "./assets/ff.jpg";
+import elty_ff1 from "./assets/ff1.jpg";
+import elty_ff2 from "./assets/ff2.jpg";
+import elty_ff3 from "./assets/ff3.jpg";
+import elty_ff4 from "./assets/ff4.jpg";
+import elty_ff5 from "./assets/ff5.jpg";
+import elty_ff6 from "./assets/ff6.jpg";
+import elty_ff7 from "./assets/ff7.jpg";
+import elty_ff8 from "./assets/ff8.jpg";
+import elty_ff9 from "./assets/ff9.jpg";
+import elty_fff  from "./assets/fff.jpg";
+import elty_fff1 from "./assets/fff1.jpg";
+import elty_fff3 from "./assets/fff3.jpg";
+import elty_fff4 from "./assets/fff4.jpg";
+import elty_fff5 from "./assets/fff5.jpg";
+import elty_fff6 from "./assets/fff6.jpg";
+import elty_fff7 from "./assets/fff7.jpg";
+import elty_fff8 from "./assets/fff8.jpg";
+
+const ELTY_MEDIA = [
+  elty_f, elty_f1, elty_f2, elty_f3, elty_f4, elty_f5,
+  elty_f6, elty_f7, elty_f8, elty_f9,
+  elty_ff, elty_ff1, elty_ff2, elty_ff3, elty_ff4, elty_ff5,
+  elty_ff6, elty_ff7, elty_ff8, elty_ff9,
+  elty_fff, elty_fff1, elty_fff3, elty_fff4, elty_fff5,
+  elty_fff6, elty_fff7, elty_fff8,
+].map(src => ({ type: "img", src }));
+
 // Inline GitHub icon — removed from lucide-react v1+
 function Github({ size = 18, className = "", style = {} }) {
   return (
@@ -546,6 +585,19 @@ const projects = [
     screenshots: [],
     media: SIGNAL_EQUALIZER_MEDIA,
   },
+  {
+    title: "3elty",
+    subtitle: "Egyptian Family Health Companion",
+    desc: "Cross-platform family health management app built with Flutter & Firebase. Supports 5 role-based profiles (Child, Elderly, Pregnant, Chronic, Adult) with digital vaccination booklets, vital monitoring, missed-dose alerts, GPS panic button, and a shared family calendar — all with offline-first SQLite caching.",
+    tags: ["Flutter", "Firebase", "Dart", "SQLite", "Agile", "Scrum"],
+    accent: "#34d399",
+    icon: Database,
+    highlights: ["5 Profile Types", "GPS Panic Button", "Offline-First"],
+    repo: "https://github.com/sohaila-emad/3elty",
+    screenshot: elty_f,
+    screenshots: [],
+    media: ELTY_MEDIA,
+  },
 ];
 
 function ProjectCard({ project, index }) {
@@ -588,8 +640,14 @@ function ProjectCard({ project, index }) {
       <div className="h-0.5 w-full" style={{ background: `linear-gradient(90deg, ${project.accent}, transparent)` }} />
 
       {/* ── Media carousel (images + video) ── */}
+      {(() => {
+        // Use taller height for portrait/mobile screenshots (3elty), normal for landscape
+        const isPortrait = project.media?.length > 0 &&
+          project.media[0]?.src && project.title === "3elty";
+        const carouselH = isPortrait ? 380 : 200;
+        return (
       <motion.div
-        animate={{ height: hovered && hasMedia ? 200 : 0, opacity: hovered && hasMedia ? 1 : 0 }}
+        animate={{ height: hovered && hasMedia ? carouselH : 0, opacity: hovered && hasMedia ? 1 : 0 }}
         transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         className="relative overflow-hidden bg-zinc-950"
       >
@@ -598,21 +656,24 @@ function ProjectCard({ project, index }) {
             key={i}
             animate={{ opacity: i === slideIndex ? 1 : 0 }}
             transition={{ duration: 0.4 }}
-            className="absolute inset-0"
+            className="absolute inset-0 flex items-center justify-center"
           >
             {item.type === "video" ? (
               <video
                 src={item.src}
                 autoPlay muted loop playsInline
                 className="w-full h-full object-cover object-top"
-                style={{ height: 200 }}
+                style={{ height: carouselH }}
               />
             ) : (
               <img
                 src={item.src}
                 alt={`${project.title} screenshot ${i + 1}`}
-                className="w-full h-full object-cover object-top"
-                style={{ height: 200 }}
+                className={isPortrait
+                  ? "h-full w-auto object-contain mx-auto"
+                  : "w-full h-full object-cover object-top"
+                }
+                style={{ height: carouselH, maxHeight: carouselH }}
               />
             )}
           </motion.div>
@@ -624,7 +685,7 @@ function ProjectCard({ project, index }) {
 
         {/* Dot indicators */}
         {media.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1 z-20">
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1 z-20 flex-wrap justify-center max-w-xs">
             {media.map((item, i) => (
               <button key={i} onClick={() => setSlideIndex(i)}
                 className="rounded-full transition-all duration-300 flex items-center justify-center"
@@ -656,6 +717,8 @@ function ProjectCard({ project, index }) {
           Repo
         </a>
       </motion.div>
+        );
+      })()}
 
       <div className="p-7">
         <div className="flex items-start justify-between mb-5">
@@ -734,7 +797,6 @@ function Projects() {
                 "Medical Brain Image Viewer (PyQt5)",
                 "YOLO Object Tracker with Heatmaps",
                 "Sinus Endoscopy Classifier — 92% Accuracy",
-                "3elty Health App (Flutter)",
               ].map(p => (
                 <span key={p} className="flex items-center gap-1.5 text-xs text-zinc-400 font-mono">
                   <Zap size={10} className="text-cyan-500" />
