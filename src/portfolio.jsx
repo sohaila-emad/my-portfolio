@@ -94,6 +94,21 @@ const ELTY_MEDIA = [
   elty_fff6, elty_fff7, elty_fff8,
 ].map(src => ({ type: "img", src }));
 
+// Lahja — Arabic Dialect AI screenshots
+import lahja_d  from "./assets/d.png";
+import lahja_d1 from "./assets/d1.png";
+import lahja_d2 from "./assets/d2.png";
+import lahja_d3 from "./assets/d3.png";
+import lahja_d4 from "./assets/d4.png";
+
+const LAHJA_MEDIA = [
+  { type: "img", src: lahja_d  },
+  { type: "img", src: lahja_d1 },
+  { type: "img", src: lahja_d2 },
+  { type: "img", src: lahja_d3 },
+  { type: "img", src: lahja_d4 },
+];
+
 // Inline GitHub icon — removed from lucide-react v1+
 function Github({ size = 18, className = "", style = {} }) {
   return (
@@ -597,6 +612,19 @@ const projects = [
     screenshot: elty_f,
     screenshots: [],
     media: ELTY_MEDIA,
+  },
+  {
+    title: "Lahja · لهجة",
+    subtitle: "Arabic Dialect AI — Detection · Transcription · Translation · TTS",
+    desc: "Detects Arabic dialect from voice input (Egyptian, Levantine, Emirati, Moroccan) using a custom-trained SVM on 318 DSP features. Full speech pipeline: Whisper transcription → Gemini dialect-to-dialect translation → ElevenLabs TTS playback with synchronized word highlighting.",
+    tags: ["Python", "Flask", "SVM", "Whisper", "Gemini", "ElevenLabs", "librosa"],
+    accent: "#818cf8",
+    icon: Waves,
+    highlights: ["318 DSP Features", "4 Arabic Dialects", "End-to-End Pipeline"],
+    repo: "https://github.com/sohaila-emad/FingerPrint-Arabic-Dialect",
+    screenshot: lahja_d,
+    screenshots: [],
+    media: LAHJA_MEDIA,
   },
 ];
 
